@@ -11,7 +11,7 @@ function MoviesList() {
     setError(null);
     const abortController = new AbortController();
     listMovies(abortController.signal).then(setMovies).catch(setError);
-    console.log(movies)
+
     return () => abortController.abort();
   }, []);
 
